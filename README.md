@@ -17,6 +17,10 @@ When the app starts, it randomly generates demo news articles and events so you 
 
 The application will be available at `http://localhost:5000`.
 
+To register for any event, click the **Register** link next to that event. The
+registration form saves your name and email to a local SQLite database
+(`registrations.db`).
+
 The default styles use a green color palette and subtle geometric pattern inspired by Islamic art.
 
 ## Project Structure

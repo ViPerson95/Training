@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Register for {{ event_name }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Register for {{ event_name }}</h1>
+  <form method="post">
+    <input type="hidden" name="event" value="{{ event_name }}">
+    <label>Name:<br>
+      <input type="text" name="name" required>
+    </label><br>
+    <label>Email:<br>
+      <input type="email" name="email" required>
+    </label><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
