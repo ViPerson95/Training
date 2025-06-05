@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+  <header>
+    <img src="/static/logo.svg" alt="Community Logo" class="logo">
+    <img src="/static/banner.svg" alt="Community Banner" class="banner">
+  </header>
   <h1>السلام عليكم - Welcome to the Community News and Events</h1>
   <h2>Latest News</h2>
   <ul>
@@ -21,7 +25,8 @@
   <ul>
   {% for event in events %}
     <li>
-      <strong>{{ event.name }}</strong> - {{ event.date }} at {{ event.location }}
+      <strong>{{ event.name }}</strong> - {{ event.date }} at {{ event.location }} -
+      <a href="{{ url_for('register', event=event.name) }}">Register</a>
     </li>
   {% endfor %}
   </ul>
