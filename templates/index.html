@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Community News and Events</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>السلام عليكم - Welcome to the Community News and Events</h1>
+  <h2>Latest News</h2>
+  <ul>
+  {% for item in news_items %}
+    <li>
+      <strong>{{ item.title }}</strong> - {{ item.date }}<br>
+      {{ item.description }}
+    </li>
+  {% endfor %}
+  </ul>
+
+  <h2>Upcoming Events</h2>
+  <ul>
+  {% for event in events %}
+    <li>
+      <strong>{{ event.name }}</strong> - {{ event.date }} at {{ event.location }}
+    </li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
